@@ -15,12 +15,12 @@ export default function Home() {
 const Introduction = () => {
   return (
     <div className="space-y-10">
-      <h1 className="text-secondary text-balance text-center text-3xl font-semibold">
+      <h1 className="text-balance text-center text-3xl font-semibold text-secondary">
         Exploring making my own picture-in-picture player
       </h1>
       <div className="space-y-5">
         <div className="space-y-3">
-          <h2 className="text-primary font-semibold">Why I built this:</h2>
+          <h2 className="font-semibold text-primary">Why I built this:</h2>
           <p>
             Haven&rsquo;t we all gotten used to short-form videos and can no
             longer sit through anything more than 3 mins? Yeah me too.
@@ -34,7 +34,7 @@ const Introduction = () => {
             give it a shot.
           </p>
         </div>
-        <h2 className="text-primary font-semibold">
+        <h2 className="font-semibold text-primary">
           Why not just use browser&rsquo;s built-in pip?
         </h2>
         <p>
@@ -49,7 +49,7 @@ const Introduction = () => {
 const HowThisWorks = () => {
   return (
     <div className="w-full space-y-2 text-start">
-      <h2 className="text-primary font-semibold">How this works:</h2>
+      <h2 className="font-semibold text-primary">How this works:</h2>
       <div className="space-y-1 pl-3">
         <h3 className="text-secondary">1. Check if video is in view</h3>
         <p>
@@ -67,6 +67,15 @@ const HowThisWorks = () => {
           placeholder view
         </p>
       </div>
+      <div className="space-y-1 pl-3">
+        <h3 className="text-secondary">
+          3. Animate player when transitioning between views
+        </h3>
+        <p>
+          Use keyframes and `animate` utility classes to animate player when
+          transitioning between views
+        </p>
+      </div>
     </div>
   );
 };
@@ -74,7 +83,7 @@ const HowThisWorks = () => {
 const SkeletonGenerator = () => {
   return (
     <>
-      <div className="bg-primary w-full rounded-xl  border-2 p-2 text-center text-black">
+      <div className="w-full rounded-xl border-2  bg-primary p-2 text-center text-black">
         👀 Some skeleton content to make page scrollable
       </div>
       {Array.from({ length: 20 }).map((_, i) => (

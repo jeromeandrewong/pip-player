@@ -12,6 +12,26 @@ const config: Config = {
         primary: "#BB9AF7",
         secondary: "#98F6E4",
       },
+      keyframes: {
+        videoFadeInPlaceholder: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        videoFadeInPip: {
+          from: {
+            opacity: "0",
+            transform: "translateX(100px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+      },
+      animation: {
+        videoFadeInPlaceholder: "videoFadeInPlaceholder 300ms ease-in-out",
+        videoFadeInPip: "videoFadeInPip 300ms ease-in-out",
+      },
     },
   },
   plugins: [],
