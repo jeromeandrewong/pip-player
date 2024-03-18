@@ -48,9 +48,9 @@ const Introduction = () => {
 
 const HowThisWorks = () => {
   return (
-    <div className="w-full space-y-2 text-start">
+    <div className="w-full space-y-10 text-start">
       <h2 className="font-semibold text-primary">How this works:</h2>
-      <div className="space-y-1 pl-3">
+      <div className="space-y-1">
         <h3 className="text-secondary">1. Check if video is in view</h3>
         <p>
           Intersection Observer API: browser API that allows you to monitor when
@@ -58,7 +58,7 @@ const HowThisWorks = () => {
           page)
         </p>
       </div>
-      <div className="space-y-1 pl-3">
+      <div className="space-y-1">
         <h3 className="text-secondary">
           2. Position player at bottom right of screen when out of view
         </h3>
@@ -67,13 +67,31 @@ const HowThisWorks = () => {
           placeholder view
         </p>
       </div>
-      <div className="space-y-1 pl-3">
+      <div className="space-y-1">
         <h3 className="text-secondary">
           3. Animate player when transitioning between views
         </h3>
         <p>
           Use keyframes and `animate` utility classes to animate player when
           transitioning between views
+        </p>
+      </div>
+      <div className="space-y-1">
+        <h3 className="text-secondary">
+          4. Trigger picture-in-picture only when playing
+        </h3>
+        <p>
+          Conditionally trigger picture-in-picture only when player is playing
+          by checking`mediapaused` attribute in the `MediaController`
+        </p>
+      </div>
+      <div className="space-y-1">
+        <h3 className="text-secondary">
+          5. Close button to close picture-in-picture
+        </h3>
+        <p>
+          Conditionally apply close button only when player is in floating
+          state, handle state of player when close button is clicked
         </p>
       </div>
     </div>
